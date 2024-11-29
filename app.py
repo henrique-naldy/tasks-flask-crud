@@ -8,10 +8,10 @@ app = Flask(__name__)
 
 tasks = []
 
-@app.route('/tasks', methods=['POST',])
+@app.route('/tasks', methods=['POST'])
 def Create_task():
     data = request.get_json()
-    print(date)
+    print(data)
     return 'Test'
 if __name__ == "__main__":
     app.run(debug=True)
