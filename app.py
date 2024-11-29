@@ -20,9 +20,7 @@ def Create_task():
 
 @app.route('/tasks', methods=['GET'])
 def get_tasks():
-    task_list = []
-    for task in tasks:
-        task_list.append(task.to_dict())
+    task_list = [task.to_dict() for task in tasks] 
 
     output = {
                 "tasks": task_list,
